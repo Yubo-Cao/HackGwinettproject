@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title%}
+About:GSMST philanthropy organization
+{% endblock%}
+
+{% block content %}
+{% for post in posts %}
+<a href = "#">
+    <h2>{{post['title']}} </h2>
+</a>
+<span class="badge badge-primary" style = "background-color:#113CFC">{{post['created']}}</span>
+<hr>
+{% endfor %}
+{% endblock%}

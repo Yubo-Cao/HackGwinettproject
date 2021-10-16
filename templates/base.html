@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" height = 20px>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('index')}}">GSMST Philanthropy Organization</a>
+        <img src="/static/GPicon.png" class="img-responsive" alt="GSMST Philanthropy Icon" height = "100" width = "100" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/posts">See our articles</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/join">join us</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style = "background-color:ghostwhite;">
+        {% block content %} {% endblock %}
+    </div>
+    <script src="{{url_for('static', filename='js/jquery.slim.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}" ></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}" ></script>
+   </body>
+</html>

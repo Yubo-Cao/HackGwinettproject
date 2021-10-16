@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title%}
+GSMST philanthropy organization
+{% endblock%}
+
+{% block content %}
+<div class="alert alert-warning">
+  <strong>Warning</strong>All the things in this website is fabircated for promotion of humanity and welfare to whole world.
+</div>
+<h1 class="arrow" style = "text-align: center;">Let's see what GSMST's philanthropists do!</h1>
+  <div class="container">
+    <div class="row">
+    <div class = "col-md-4 text-center">
+        <img src="{{ url_for('static',filename = '/image/image1.png')}}" class="img-circle" alt="Volunteers at GSMST" width = "300" height = "200">
+        <p class="text-center">
+              Student at GSMST, practice “experiential philanthropy,” which teaches about charitable giving through hands-on experiences. 
+        </p>
+    </div>
+    <div class = "col-md-4 text-center">
+        <img src="{{ url_for('static',filename = '/image/image2.png')}}" class="img-circle" alt="Volunteers at GSMST" width = "300" height = "200">
+        <p class="text-center">
+                  Student at GSMST doing research about philanthropy helps individual wellness.
+        </p>
+    </div>
+    <div class = "col-md-4 text-center">
+      <img src="{{ url_for('static',filename = '/image/image3.png')}}" class="img-circle" alt="Volunteers at GSMST" width = "300" height = "200">
+      <p class="text-center">
+          Student at GSMST helps the summarize the three central points about philanthropy. Kindness, giving, and care.
+      </p>
+    </div>
+  </div>
+</div>
+</ul>
+{% endblock %}
